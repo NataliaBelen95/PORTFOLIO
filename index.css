@@ -1,0 +1,415 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+   
+}
+
+html {
+  scroll-behavior:smooth ;
+  
+}
+
+body.light {
+    background-color: #fff;
+    color: #333;
+}
+
+/* Modo nocturno */
+body.dark {
+    background-color: #000000;
+    color: #fff;
+}
+
+.navHeader{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar {
+  position: fixed;
+  top:1px;
+  width: 20%;
+  background-color: rgba(128, 128, 128, 0.184); /*gris con poca opacidad*/
+  transition: top 0.3s;
+  border-radius: 2rem;
+  padding: 10px 15px;
+  display: flex; /* Establece el contenedor como un flex-container */
+  align-items: center;
+
+}
+
+.navbar ul {
+  list-style: none;
+ 
+}
+
+.navbar a {
+  text-decoration: none;
+  color: white;
+  padding: 10px 20px;
+
+}
+
+.navbar.active {
+
+  z-index: 1;
+}
+
+.navbar-light {
+  background: -webkit-linear-gradient(-60deg, #000000bc 0%, #003b3fbc 100%);
+}
+
+.navbar-dark {
+  background-color: #000000a3;
+}
+
+.navbar button{
+
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  font-size: 15px;
+
+}
+
+/* 
+body{
+    background-color: black;
+    color: white;
+} */
+
+.hero {
+    background-image: linear-gradient(-60deg, #000000b8 0%, #000000b8 100%), url(assets/programming.png);
+    width: 100%;
+    height: 650px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.textos-hero {
+    height: 500px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+}
+.column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  
+.textos-hero a{
+    display: inline-block;
+    text-decoration: none;
+    background-color: #003b3f78;
+    padding: 12px 15px;
+    margin: 5px;
+    border-radius: 5px;
+    color: #fff;
+    
+}
+.textos-hero a:hover{
+  background-color: #ef67efa1
+    
+}
+
+.textos-hero h1 {
+    font-size: 60px;
+}
+
+.textos-hero p {
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+.textos-hero h2 span {
+    color: #EF67EE;
+    font-weight: bold;
+    font-size: 50px;
+ /* Optional: adds a subtle shadow effect */
+  }
+
+.cols {
+    animation: moveToLeft 1s ease-in-out forwards;
+    text-align: center; /* Centra el contenido */
+  }
+  
+  .coles {
+    animation: moveToRight 1s ease-in-out forwards;
+    text-align: center;
+  }
+  
+  @keyframes moveToLeft {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(40%);
+    }
+  }
+  
+  @keyframes moveToRight {
+    from {
+      transform: translateX(10%);
+    }
+    to {
+      transform: translateX(100%);
+    }
+  }
+  
+
+
+.svg-hero  {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.svg-hero-light path {
+    fill: #ffffff;
+}
+.svg-hero-dark path {
+    fill: black
+}
+
+
+/*estilos generales*/
+
+.contenedor, 
+.contenedor-wave{
+    width: 90%;
+    max-width: 1000px;
+    overflow: hidden;
+    margin: auto;
+    padding: 0 0 80px 0;
+}
+
+.titulo {
+    font-weight: 300px;
+    font-size: 35px;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #ef67efb9
+    
+}
+
+.titulo.left.project{
+    text-align: left;
+    margin-left: 50px;
+    margin-top: 50px;
+
+}
+.titulo.right{
+    text-align: right;
+    color: #ef67efb9
+    
+}
+
+
+.website{
+    display: flex;
+  
+    /* width: 100%; */
+}
+
+.website img{
+    max-width: 40%;
+    margin-right: 50px;
+ 
+}
+
+.website .contenedor-textos-main{
+    width:40%;
+   
+}
+
+.parrafo{
+    text-align: justify;
+    margin-bottom: 20px;
+    margin-left: 60px;
+}
+
+.cta.contacmeA {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    width: 25%
+  }
+
+
+
+
+
+.cta{
+   
+    display: inline-block;
+    text-decoration: none;
+    padding: 12px 15px;
+    background: -webkit-linear-gradient(-60deg, #000000de 0%, #003b3fbc 100%);
+    color: #fff;
+    border-radius: 5px;
+}
+
+.cta:hover{
+    background: #ef67efb9;
+}
+
+
+.content.cards{
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 16rem));
+ 
+ 
+  
+}
+
+.card {
+    width: 20%;
+    margin: 20px;
+    text-align: center;
+    height: 350px;
+    box-shadow: 0 0 3px black;
+    transform: scale(1);
+    transition: transform 0.6s;
+    background: -webkit-linear-gradient(-60deg, #1c1c1cde 0%, #003b3fbc 100%);
+    border-radius: 5px;
+  
+  }
+.card:hover{
+    box-shadow: 0 0 6px black;
+    transform: scale(1.03);
+   
+}
+
+
+
+.card img {
+  
+  max-width: 100%;
+
+  object-fit: cover;
+  
+  /* Add a fixed height */
+  }
+
+
+
+.card a{
+    cursor: pointer;
+}
+
+.card span{
+  width: 100%;
+  display: flex;
+  justify-content:center ;  
+
+    
+}
+
+.card span i{
+    margin: 4px;
+    font-size: 25px;
+}
+.card h2 {
+  font-size: 1em;
+  max-height: 50px;
+  overflow: hidden;
+  color: #ef67efb9;
+  height: 2rem;
+ 
+}
+
+#contactMe {
+  background: -webkit-linear-gradient(-60deg, #1c1c1cde 0%, #003b3fbc 100%);
+  color: #fff;
+  padding: 30px 0;
+  
+}
+
+#contactMe .contenedor {
+  max-width: 1200px;
+  display: flex;
+  justify-content: center;
+
+
+}
+
+#contactMe ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+#contactMe li {
+  list-style: none;
+  margin-right: 20px;
+}
+
+#contactMe a {
+  color:#ef67efb9;
+  font-size: 24px;
+  transition: color 0.3s ease;
+}
+
+#contactMe a:hover {
+  color: #003b3f78;
+}
+
+
+  
+
+
+ 
+  /* .contenedor-website.tecnology {
+    width: 50%;
+    overflow-x: hidden;
+    justify-content: center;
+    align-items: center;
+  } */
+
+  .carrusel {
+    display: flex;
+    overflow: hidden;
+    margin: 0 auto;
+    width: 80%;
+    height: 300px;
+     /* Ajustar la altura según tus necesidades */
+  }
+  
+  .carrusel img {
+    margin: 0 10px; /* Añadir un margen horizontal para separar las imágenes */
+    max-width: 30%; /* Asegurarse de que la imagen ocupe todo el ancho del contenedor */
+   
+  }
+
+  .slick-slide {
+    padding: 0 5px; /* Agregar un padding horizontal para evitar que las imágenes se solapen */
+  }
+
+  .svg-last{
+    background: -webkit-linear-gradient(-60deg, #000000de 0%, #003b3fbc 100%);
+  }
+  
