@@ -22,30 +22,7 @@ boton.addEventListener("click", function () {
   navbar.classList.toggle("navbar-dark");
 });
 
-$(document).ready(function () {
-  $(".carrusel").slick({
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 3,
-    autoplay: true, // Agregar esta opción para hacer que el carrusel se mueva automáticamente
-    autoplaySpeed: 3000, // Opcional: establece la velocidad de cambio de diapositivas (en milisegundos)
-    responsive: [
-      {
-        breakpoint: 992,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-        },
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-  });
+document.addEventListener('DOMContentLoaded', function() {
+  var elems = document.querySelectorAll('.parallax');
+  var instances = M.Parallax.init(elems);
 });
